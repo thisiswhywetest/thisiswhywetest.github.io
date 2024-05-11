@@ -9,7 +9,7 @@
 
 **Rustscan**
 
-Start by running a port scan using `rustscan` which should reveal three open ports: `21`, `23`, and `5000`.
+Start by running a port scan using `rustscan` which should reveal three open ports: `21`, `23`, and `80`.
 
 ```
 rustscan -a 10.10.10.98 -- -sC -sV
