@@ -1,7 +1,7 @@
 ---
-title: HTB : Access
+title: "HTB : Access"
 permalink: /access
-location:
+location: default
 ---
 
 # Access
