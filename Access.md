@@ -1,3 +1,9 @@
+---
+title: HTB : Access
+permalink: /access
+location:
+---
+
 # Access
 
 **Machine Information**
