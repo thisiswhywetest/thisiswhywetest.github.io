@@ -1,6 +1,6 @@
 ---
-title: "HTB : Access"
-permalink: /writeups/access
+title: "HTB : Active"
+permalink: /writeups/active
 location: default
 ---
 
