@@ -1,10 +1,10 @@
 ---
-title: "HTB : Active"
+title: "HTB Active"
 permalink: /writeups/active
 location: default
 ---
 
-# Access
+# HTB Active
 
 **Machine Information**
 
