@@ -1,5 +1,5 @@
 ---
-title: "HTB : Access"
+title: "HTB Access"
 permalink: /writeups/access
 location: default
 ---
