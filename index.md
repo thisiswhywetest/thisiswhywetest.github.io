@@ -10,7 +10,7 @@ layout: default
 
 # HTB Writeups
 
-### [HTB Access](/writeups/access.md)
+### [Access](/writeups/access.md)
 
 - Windows
 - Easy
