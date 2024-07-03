@@ -4,6 +4,8 @@ permalink: /writeups/arctic
 location: default
 ---
 
+# HTB Arctic
+
 **Machine Information**
 
 	IP : 10.10.10.11
