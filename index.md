@@ -23,3 +23,17 @@ layout: default
 - Easy
 
 #smb #cpassword
+
+### [Arctic](/writeups/arctic.md)
+
+- Windows
+- Easy
+
+#coldfusion #juicypotato
+
+### [Bastard](/writeups/bastard.md)
+
+- Windows
+- Medium
+
+#drupal #chimichurri
