@@ -4,7 +4,7 @@ permalink: /writeups/access
 location: default
 ---
 
-# Access
+# HTB Access
 
 **Machine Information**
 
@@ -15,11 +15,13 @@ location: default
 
 **Rustscan**
 
-Start by running a port scan using `rustscan` which should reveal three open ports: `21`, `23`, and `80`.
+Start by running a port scan using `rustscan`.
 
 ```
 rustscan -a 10.10.10.98 -- -sC -sV
 ```
+
+This should reveal three open ports: `21`, `23`, and `80`.
 
 ```
 PORT   STATE SERVICE REASON  VERSION
