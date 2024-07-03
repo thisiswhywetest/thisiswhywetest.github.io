@@ -11,3 +11,4 @@ layout: default
 # HTB Writeups
 
 - [Access](/writeups/access.md)
+- [Active](/writeups/active.md)
