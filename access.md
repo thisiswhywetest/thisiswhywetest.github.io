@@ -1,6 +1,6 @@
 ---
 title: "HTB : Access"
-permalink: /access
+permalink: /writeups/access
 location: default
 ---
 
