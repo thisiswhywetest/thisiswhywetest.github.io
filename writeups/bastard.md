@@ -3,6 +3,7 @@ title: "HTB Bastard"
 permalink: /writeups/bastard
 location: default
 ---
+
 # HTB Bastard
 
 **Machine Information**
