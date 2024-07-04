@@ -8,7 +8,6 @@ location: default
 
 **Machine Information**
 
-	Difficulty : Easy
 	IP : 10.10.10.98
 	OS : Windows
 
