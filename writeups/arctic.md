@@ -33,11 +33,11 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Investigate each of the ports and there should be a web server running on port 8500.
 
-> http://10.10.10.11:8500/
+<http://10.10.10.11:8500/>
 
 The default page is an `Index of /` and allows directory listing so we can explore the available files. Exploring the directories will reveal an Adobe ColdFusion 8 Administrator panel at the following location:
 
-> http://10.10.10.11:8500/CFIDE/administrator/
+<http://10.10.10.11:8500/CFIDE/administrator/>
 
 ### Getting a Foothold
 
@@ -55,7 +55,7 @@ This will reveal a python script that we can use for remote code execution.
 Adobe ColdFusion 8 - Remote Command Execution (RCE) | cfm/webapps/50057.py
 ```
 
-> https://www.exploit-db.com/exploits/50057
+https://www.exploit-db.com/exploits/50057
 
 Open the exploit and update the `LHOST`, `LPORT`, and `RHOST` parameters to the appropriate values. Start a new `netcat` listener and run the exploit.
 
