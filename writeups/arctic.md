@@ -3,7 +3,6 @@ title: "HTB Arctic"
 permalink: /writeups/arctic
 location: default
 ---
-
 # HTB Arctic
 
 **Machine Information**
@@ -55,7 +54,7 @@ This will reveal a python script that we can use for remote code execution.
 Adobe ColdFusion 8 - Remote Command Execution (RCE) | cfm/webapps/50057.py
 ```
 
-https://www.exploit-db.com/exploits/50057
+<https://www.exploit-db.com/exploits/50057>
 
 Open the exploit and update the `LHOST`, `LPORT`, and `RHOST` parameters to the appropriate values. Start a new `netcat` listener and run the exploit.
 
@@ -91,7 +90,7 @@ SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 
 For this we need to upload the `JuicyPotato.exe` exploit that can be downloaded from the following link:
 
-> https://github.com/ohpe/juicy-potato/releases/tag/v0.1
+<https://github.com/ohpe/juicy-potato/releases/tag/v0.1>
 
 We will also need a reverse shell payload that can be generated using `msfvenom`.
 
