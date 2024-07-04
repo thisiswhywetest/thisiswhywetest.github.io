@@ -3,6 +3,7 @@ title: "HTB Active"
 permalink: /writeups/active
 location: default
 ---
+
 # HTB Active
 
 **Machine Information**
