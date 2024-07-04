@@ -52,7 +52,7 @@ layout: default
 
 #achat #icacls
 
-### [Delivery](/writeups/deliver.md)
+### [Delivery](/writeups/delivery.md)
 
 - Linux
 - Easy
