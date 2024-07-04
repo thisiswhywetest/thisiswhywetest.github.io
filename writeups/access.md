@@ -3,7 +3,6 @@ title: "HTB Access"
 permalink: /writeups/access
 location: default
 ---
-
 # HTB Access
 
 **Machine Information**
