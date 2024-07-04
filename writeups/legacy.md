@@ -21,7 +21,7 @@ Start by running a port scan using `rustscan`.
 rustscan -a 10.10.10.4 -- -sC -sV
 ```
 
-which should reveal three open ports: `135`, `139`, and `445`.
+This should reveal three open ports: `135`, `139`, and `445`.
 
 ```
 PORT    STATE SERVICE      REASON  VERSION
