@@ -1,4 +1,4 @@
-# HTB 
+# HTB Paper
 
 **Machine Information**
 
@@ -118,15 +118,15 @@ Content-Type: text/html; charset=UTF-8
 
 Update the `/etc/hosts` file. Visiting the vhost we can now see a WordPress site called **Blunder Tiffin**. This is using version 5.2.3 of WordPress which is vulnerable to CVE-2019-17671. Looking at this exploit shows an easy way to reveal additional information.
 
-https://www.exploit-db.com/exploits/47690
+<https://www.exploit-db.com/exploits/47690>
 
 If we append `?static=1` to our website we can see more information about Michael putting secrets in the drafts. 
 
-http://office.paper/?static=1
+<http://office.paper/?static=1>
 
 The page also includes a link to a new vhost that we will need to updated in `/etc/hosts`.
 
-http://chat.office.paper/register/8qozr226AhkCHZdyY
+<http://chat.office.paper/register/8qozr226AhkCHZdyY>
 
 We can register an account and gain access to the Rocket Chat system. The chat shows a bot called `recyclops` that answers a few questions but it appears that the group chat is read only. However, there is a message from Kelly that shows that we can direct message the bot "We can also send Direct Messages to recyclops!".
 
@@ -221,7 +221,7 @@ cat /home/dwight/user.txt
 
 Running `linPEAS` shows that the target machine is potentially vulnerable to CVE-2021-3560. We found the following proof of concept to use.
 
-https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation
+<https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation>
 
 Run the exploit to create a new user with `sudo` privileges.
 
