@@ -38,6 +38,13 @@ layout: default
 
 #drupal #chimichurri
 
+### [Bastion](/writeups/bastion.md)
+
+- Windows
+- Easy
+
+#smb #secretsdump #vhd #mremoteng
+
 ### [BountyHunter](/writeups/bountyhunter.md)
 
 - Linux
@@ -72,6 +79,13 @@ layout: default
 - Easy
 
 #as-rep #hashcat #bloodhound #genericall #dcsync #secretsdump
+
+### [Inject](/writeups/inject.md)
+
+- Linux
+- Easy
+
+#pathtraversal #springboot #spring4shell #cve-2022-22963 #ansible #pspy #cronjob
 
 ### [Keeper](/writeups/keeper.md)
 
