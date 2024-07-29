@@ -101,6 +101,13 @@ layout: default
 
 #smb #ms08-067
 
+### [Paper](/writeups/paper.md)
+
+- Linux
+- Easy
+
+#wordpress #rocketchat #bot #pathtraversal #cve-2021-3560
+
 ### [Querier](/writeups/querier.md)
 
 - Windows
