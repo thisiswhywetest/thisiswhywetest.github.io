@@ -1,4 +1,4 @@
-# HTB 
+# HTB Inject
 
 **Machine Information**
 
@@ -38,11 +38,11 @@ Visit the web server on port 8080 to find an upload button in the top right corn
 
 If we take a look at the URL we can see the image is being passed in using the `img` parameter.
 
-http://10.10.11.204:8080/show_image?img=geralt.php.png
+<http://10.10.11.204:8080/show_image?img=geralt.php.png>
 
 As expected the image doesn't render but the source code can be inspected using Burp Suite. Using a common directory traversal payload we can access the `/etc/passwd` using the same method.
 
-http://10.10.11.204:8080/show_image?img=../../../../../../../../etc/passwd
+<http://10.10.11.204:8080/show_image?img=../../../../../../../../etc/passwd>
 
 This reveals two non-root users, `frank` and `phil`.
 
@@ -90,7 +90,7 @@ It is also possible to list files using directory traversal.
 
 **NOTE:** this request took a while to return a response
 
-http://10.10.11.204:8080/show_image?img=../
+<http://10.10.11.204:8080/show_image?img=../>
 
 ```
 java
@@ -100,7 +100,7 @@ uploads
 
 Continuing to explore the file system we find a file called `pom.xml`.
 
-http://10.10.11.204:8080/show_image?img=../../../
+<http://10.10.11.204:8080/show_image?img=../../../>
 
 ```
 .classpath
@@ -129,7 +129,7 @@ This file reveals that the underlying system is using version 2.6.5 of Spring Bo
 
 A bit of research shows that this has the vulnerability `CVE-2022-22965`, also known as `Spring4Shell`. I was able to use the following exploit to get a shell.
 
-https://github.com/J0ey17/CVE-2022-22963_Reverse-Shell-Exploit
+<https://github.com/J0ey17/CVE-2022-22963_Reverse-Shell-Exploit>
 
 Run the script and it will ask if you want a reverse shell.
 
