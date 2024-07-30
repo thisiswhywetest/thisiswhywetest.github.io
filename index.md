@@ -135,3 +135,10 @@ layout: default
 - Medium
 
 #sqli
+
+### [Wifinetic](/writeups/wifinetic)
+
+- Linux
+- Easy
+
+#openwrt #reaver #wifi
