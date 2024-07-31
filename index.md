@@ -108,6 +108,13 @@ layout: default
 
 #smb #ms08-067
 
+### [Netmon](/writeups/netmon.md)
+
+- Windows
+- Easy
+
+#cve-2018-9276 #prtg-network-monitor
+
 ### [Paper](/writeups/paper.md)
 
 - Linux
