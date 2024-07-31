@@ -52,6 +52,13 @@ layout: default
 
 #xxe #python
 
+### [Cap](/writeups/cap.md)
+
+- Linux
+- Easy
+
+#wireshark #strings #capabilities
+
 ### [Chatterbox](/writeups/chatterbox.md)
 
 - Windows
