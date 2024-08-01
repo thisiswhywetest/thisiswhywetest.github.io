@@ -120,7 +120,7 @@ layout: default
 - Linux
 - Easy
 
-#wordpress #rocketchat #bot #pathtraversal #cve-2021-3560
+#wordpress #rocketchat #bot #path-traversal #cve-2021-3560
 
 ### [Querier](/writeups/querier.md)
 
@@ -142,6 +142,13 @@ layout: default
 - Medium
 
 #sqli #iis #wsl #smb
+
+### [Umbraco](/writeups/umbraco)
+
+- Windows
+- Easy
+
+#umbraco-cms #printspoofer
 
 ### [Union](/writeups/union)
 
