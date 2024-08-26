@@ -6,7 +6,9 @@ layout: default
 
 # Checklists
 
-- [TBA](#)
+- [Getting a Foothold](/cheatsheets/gettingafoothold.md)
+- [Linux Privilege Escalation](/cheatsheets/linuxprivesc.md)
+- [Windows Privilege Escalation](/cheatsheets/windowsprivesc.md)
 
 # HTB Writeups
 
